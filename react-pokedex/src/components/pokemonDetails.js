@@ -13,13 +13,14 @@ const PokemonDetails = props => {
 
   return (
     <Container className="results">
+      <h3>ID: {id}</h3>
       <img 
         src={sprites.other['official-artwork'].front_default}
         alt={name}
         height="auto"
         width="100%"
       />
-      <h1>{id}: {name}</h1>
+      <h1>{name}</h1>
       <ul>
         <li>Base Experience: {base_experience}</li>
         <li>Height: {height}</li>

@@ -37,6 +37,7 @@ code {
   justify-content: space-between;
   background: var(--primaryDark);
   padding: 5px;
+  position: relative;
 }
 
 .app-header .lense {
@@ -48,6 +49,17 @@ code {
   border-radius: 100px;
   height: 45px;
   width: 45px;
+}
+
+.app-header::after {
+  content: '';
+  background: var(--primaryDark);
+  width: 100px;
+  height: 15px;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .lights {
@@ -107,7 +119,7 @@ input {
   font-size: 18px;
   font-family: 'Press Start 2P', cursive;
   outline: none;
-  margin-bottom: 15px;
+  padding: 5px;
 }
 
 input:focus {
@@ -124,13 +136,12 @@ input:focus {
 }
 
 .screen {
-  margin-top: 15px;
+  margin-top: 30px;
   border: 8px solid grey;
   border-radius: 15px;
   background: white;
   box-shadow: inset 0px 1px 2px black;
   padding: 15px;
-
 }
 
 .results {
