@@ -1,7 +1,7 @@
 {
   "name": "mern-pokedex",
   "version": "1.0.0",
-  "description": "",
+  "description": "A fullstack MERN app with GraphQL and React.",
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon server/server.js",
