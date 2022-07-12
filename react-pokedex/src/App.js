@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from './components/header'
+import Screen from './components/screen'
 import SearchForm from './components/searchForm'
 import PokemonDetails from './components/pokemonDetails'
 import Spinner from './components/spinner'
@@ -57,13 +58,15 @@ function App() {
   return (
     <>
       <Header />
+      <Screen>
+        { renderUI() }
+      </Screen>
       <SearchForm 
         searchTerm={searchTerm}
         handleInputChange={handleInputChange}
         handleFormSubmit={handleFormSubmit}
         reset={reset}
       />
-      { renderUI() }
     </>
   );
 }

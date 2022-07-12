@@ -1,9 +1,16 @@
-import Logo from '../pokeapi_256.png'
+import { MdPerson } from 'react-icons/md'
 
 const Header = () => {
   return (
     <header className="app-header">
-      <img src={Logo} alt="PokeAPI logo" />
+      <div className="lense">
+        <MdPerson size={45} />
+      </div>
+      <div className="lights">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </header>
   )
 }
