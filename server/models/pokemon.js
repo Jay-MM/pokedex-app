@@ -1,4 +1,4 @@
-const { Schema, DataTypes, model } = require('mongoose')
+const { Schema, model } = require('mongoose')
 
 const pokemonSchema = new Schema({
   pokemonId: Number,
@@ -9,9 +9,9 @@ const pokemonSchema = new Schema({
   },
   height: Number,
   weight: Number, 
-  image: String,
   base_experience: Number,
-  moves: [DataTypes.Mixed]
+  image: String,
+  moves: [String]
 })
 
 const Pokemon = model('Pokemon', pokemonSchema)
