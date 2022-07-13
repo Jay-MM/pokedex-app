@@ -14,7 +14,15 @@ const resolvers = {
     trainers: async () => {
       return await Trainer.find().populate('pokemon')
     },
-  }
+  },
+  Mutation: {
+    addPokemon: async (parent, args, context, info) => {
+      return await Pokemon.create(args)
+    },
+    addTrainer: async (parent, args, context, info) => {
+      return await (await Trainer.create(args)).populate('pokemon')
+    }
+  },
 }
 
 module.exports = resolvers

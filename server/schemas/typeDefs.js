@@ -26,6 +26,23 @@ const typeDefs = gql`
     trainers: [Trainer]
   }
 
+  type Mutation {
+    addPokemon(
+      pokemonId: Int!, 
+      name: String!, 
+      height: Int, 
+      weight: Int, 
+      base_experience: Int, 
+      image: String, 
+      moves: [String]
+    ): Pokemon
+
+    addTrainer(
+      username: String!, 
+      email: String!, 
+      password: String!
+    ): Trainer
+  }
 `
 
 module.exports = typeDefs
