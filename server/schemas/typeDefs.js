@@ -16,10 +16,13 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    pokemon: [Pokemon]
   }
 
   type Query {
+    pokemon(pokemonId: Int): Pokemon
     pokemons: [Pokemon]
+    trainer(_id: ID): Trainer
     trainers: [Trainer]
   }
 
