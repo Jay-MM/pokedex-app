@@ -28,6 +28,7 @@ const typeDefs = gql`
 
   type Mutation {
     addPokemon(
+      trainerId: ID!,
       pokemonId: Int!, 
       name: String!, 
       height: Int, 
