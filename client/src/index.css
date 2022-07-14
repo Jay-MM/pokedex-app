@@ -88,13 +88,16 @@ code {
   border: 2px solid var(--greenDark);
 }
 
+form {
+  padding: 15px 0;
+  width: 100%;
+}
+
 #search-form {
   background: var(--primaryDark);
-  padding: 15px 0;
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
 }
 
 #search-form .container {
@@ -112,9 +115,7 @@ code {
 
 input {
   border-width: 0;
-  border-bottom: 3px solid var(--light);
-  background: transparent;
-  color: var(--light);
+  border-bottom: 3px solid var(--light);  
   width: 100%;
   font-size: 18px;
   font-family: 'Press Start 2P', cursive;
@@ -122,10 +123,20 @@ input {
   padding: 5px;
 }
 
-input:focus {
+#search-form input { 
+  background: transparent;
+  color: var(--light);
+}
+
+#search-form input:focus {
   color: var(--hightlight);
   background-color: var(--primaryDarkest);
   border-bottom-color: var(--hightlight);
+}
+
+#login-form input {
+  border-bottom: 3px solid var(--secondaryDark);
+  margin-bottom: 15px;
 }
 
 .container {
@@ -169,12 +180,14 @@ button {
 }
 
 .loader {
+  display: block;
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
+  margin: 0 auto;
 }
 
 @keyframes spin {
