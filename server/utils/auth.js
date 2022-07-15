@@ -5,7 +5,7 @@ const secret = 'shhhhhhhhhh'
 const expiration = '2h'
 
 module.exports = { 
-  authMiddlware: function({ req }) {
+  authMiddleware: function({ req }) {
     // allows token to be sent via req.body, req.query, or headers
     let token = req.body.token || req.query.token || req.headers.authorization
     if (req.headers.authorization) {

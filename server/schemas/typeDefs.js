@@ -19,6 +19,11 @@ const typeDefs = gql`
     pokemon: [Pokemon]
   }
 
+  type Auth {
+    token: String
+    trainer: Trainer 
+  }
+
   type Query {
     pokemon(pokemonId: Int): Pokemon
     pokemons: [Pokemon]
@@ -27,6 +32,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
+    login(email: String!, password: String!): Auth
+
     addPokemon(
       trainerId: ID!,
       pokemonId: Int!, 
