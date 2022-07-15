@@ -10,5 +10,5 @@ A fullstack MERN app with GraphQL and React.
 * [x] React Router
 * [x] Set Up Apollo Client
 * [x] Login page
-* [ ] Trainer page
-* [ ] Save pokemon 
+* [x] Trainer page
+* [x] Save pokemon 

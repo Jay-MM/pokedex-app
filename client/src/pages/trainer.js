@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { GET_TRAINER } from '../utils/queries'
 import { useQuery } from "@apollo/client"
 import Spinner from '../components/spinner'
+import Auth from '../utils/auth'
 
 const Trainer = () => {
   const { id } = useParams()
@@ -18,6 +19,9 @@ const Trainer = () => {
     <>
       <h1>{data.trainer.username}</h1>
       <p>{data.trainer.email}</p>
+
+      <button onClick={Auth.logout}>LOGOUT</button>
+
       <h2>My Pokemon</h2>
       <ul>
         {data.trainer.pokemon.map((pokemon, i) => {
