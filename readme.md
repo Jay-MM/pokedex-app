@@ -4,11 +4,11 @@ A fullstack MERN app with GraphQL and React.
 ## TODOs
 
 ### Backend
-* [ ] JWT Authentication
+* [x] JWT Authentication
 
 ### Frontend
-* [ ] React Router
-* [ ] Set Up Apollo Client
+* [x] React Router
+* [x] Set Up Apollo Client
 * [ ] Login page
 * [ ] Trainer page
 * [ ] Save pokemon 

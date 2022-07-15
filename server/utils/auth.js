@@ -11,8 +11,9 @@ module.exports = {
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim()
     }
-    if (!token)
+    if (!token) {
       return req;
+    }
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration })
       req.user = data
