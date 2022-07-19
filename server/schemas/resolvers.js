@@ -28,7 +28,6 @@ const resolvers = {
       }
       // verify password
       const isCorrectPW = await trainer.isCorrectPassword(password)
-      console.log(isCorrectPW)
 
       // if not correct, respond with an error
       if (!isCorrectPW) {
