@@ -7,6 +7,16 @@ export const ThemeContext = createContext(defaultContext)
 export const ThemeContextProvider = props => {
   const [theme, setTheme] = useState(defaultContext)
 
+  useEffect(() => {
+    if (theme === 'light') {
+      document.body.classList.add('light')
+      document.body.classList.remove('dark')
+    } else {
+      document.body.classList.add('dark')
+      document.body.classList.remove('light')
+    }
+  }, [theme])
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {props.children}
@@ -14,3 +24,5 @@ export const ThemeContextProvider = props => {
   )
 }
 
+// helper function to easily access context
+export const useThemeContext = () => useContext(ThemeContext)
