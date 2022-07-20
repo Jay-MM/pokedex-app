@@ -15,6 +15,8 @@ import Search from './pages/search'
 import Trainer from './pages/trainer';
 import Login from './pages/login';
 
+import { ThemeContextProvider } from "./ctx/themeContext";
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -38,17 +40,19 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <Header />
-        <Screen>
-          <Routes>
-            <Route path="/" element={<Search />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/trainer/:id" element={<Trainer />} />
-          </Routes>
-        </Screen>
-      </BrowserRouter>
+    <ApolloProvider client={client}> {/* context */}
+      <ThemeContextProvider>
+        <BrowserRouter> {/* context */}
+          <Header />
+          <Screen>
+            <Routes>
+              <Route path="/" element={<Search />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/trainer/:id" element={<Trainer />} />
+            </Routes>
+          </Screen>
+        </BrowserRouter>
+      </ThemeContextProvider>
     </ApolloProvider>
   )
 }
