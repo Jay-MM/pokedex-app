@@ -1,14 +1,6 @@
-# React Pokedex
-A fullstack MERN app with GraphQL and React.
+# MERN Pokédex
 
-## TODOs
+A fullstack Mongo/Express/React/Node/GraphQL Pokédex.
 
-### Backend
-* [x] JWT Authentication
-
-### Frontend
-* [x] React Router
-* [x] Set Up Apollo Client
-* [x] Login page
-* [x] Trainer page
-* [x] Save pokemon 
+## APIs used:
+* [PokéAPI](https://pokeapi.co)
