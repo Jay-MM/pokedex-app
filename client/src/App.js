@@ -6,7 +6,9 @@ import Auth from './utils/auth'
 import Search from './pages/search'
 import Trainer from './pages/trainer'
 import Login from './pages/login'
+
 import Screen from './components/screen'
+import Header from './components/header'
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -31,7 +33,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
-        {/* Header */}
+        <Header />
         <Screen>
           <Routes>
             <Route path="/" element={<Search />} />
