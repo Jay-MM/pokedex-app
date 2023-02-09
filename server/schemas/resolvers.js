@@ -28,6 +28,7 @@ const resolvers = {
       return pokemon
     },
     addTrainer: async (parent, args, context, info) => {
+      const trainer = await Trainer.create(args)
       return await Trainer.create(args)
     },
   }
